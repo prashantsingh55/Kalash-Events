@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { PhoneIcon, MailIcon, WhatsAppIcon, MenuIcon, XIcon, SparklesIcon } from "./Icons";
+import { PhoneIcon, MailIcon, WhatsAppIcon, MenuIcon, XIcon, ArrowRightIcon } from "./Icons";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,19 +33,19 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Announcements & Quick Dial Bar */}
-      <div className="bg-emerald-950 text-emerald-100 text-xs py-2 px-4 select-none relative z-50 border-b border-emerald-900">
+      {/* Top Announcements & Quick Dial Bar - Refined Light Theme */}
+      <div className="bg-emerald-50/95 text-emerald-950 text-xs py-2 px-4 select-none relative z-50 border-b border-emerald-200/80">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-2 font-medium">
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
             </span>
-            <span className="text-emerald-50 font-semibold tracking-wide">
+            <span className="text-emerald-950 font-bold tracking-wide">
               Official Hub: Kalash Events Pvt. Ltd. (कलश इभेन्ट्स)
             </span>
-            <span className="hidden md:inline-block text-emerald-500">•</span>
-            <span className="hidden md:inline-block text-emerald-200">
+            <span className="hidden md:inline-block text-emerald-400 font-bold">•</span>
+            <span className="hidden md:inline-block text-emerald-800 font-medium">
               Registrations Open for Newa: Maicha Baucha &amp; Little Miss Angel Nepal
             </span>
           </div>
@@ -53,26 +53,26 @@ export default function Navbar() {
           <div className="flex items-center gap-4 text-xs">
             <a
               href="tel:+9779841436874"
-              className="flex items-center gap-1.5 hover:text-white transition-colors"
+              className="flex items-center gap-1.5 text-emerald-900 hover:text-emerald-700 transition-colors"
             >
-              <PhoneIcon className="w-3.5 h-3.5 text-emerald-400" />
+              <PhoneIcon className="w-3.5 h-3.5 text-emerald-700" />
               <span className="font-semibold">+977 984-1436874</span>
             </a>
-            <span className="text-emerald-700 hidden sm:inline">|</span>
+            <span className="text-emerald-300 hidden sm:inline">|</span>
             <a
               href="mailto:kalashevents12@gmail.com"
-              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors"
+              className="hidden sm:flex items-center gap-1.5 text-emerald-900 hover:text-emerald-700 transition-colors"
             >
-              <MailIcon className="w-3.5 h-3.5 text-emerald-400" />
-              <span>kalashevents12@gmail.com</span>
+              <MailIcon className="w-3.5 h-3.5 text-emerald-700" />
+              <span className="font-medium">kalashevents12@gmail.com</span>
             </a>
             <a
               href="https://wa.me/9779841436874?text=Hello%20Kalash%20Events,%20I%20would%20like%20to%20inquire%20about%20your%20events%20and%20pageants."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 bg-emerald-700 hover:bg-emerald-600 text-white px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition-all shadow-sm"
+              className="inline-flex items-center gap-1 bg-emerald-700 hover:bg-emerald-800 text-white px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition-all shadow-xs"
             >
-              <WhatsAppIcon className="w-3 h-3 text-emerald-100" />
+              <WhatsAppIcon className="w-3 h-3 text-white" />
               <span>WhatsApp</span>
             </a>
           </div>
@@ -134,8 +134,8 @@ export default function Navbar() {
               href="#registration"
               className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-emerald-700 via-emerald-800 to-teal-900 shadow-md shadow-emerald-900/15 hover:shadow-emerald-900/30 hover:scale-105 active:scale-95 transition-all"
             >
-              <SparklesIcon className="w-4 h-4 text-emerald-200" />
               <span>Audition Register</span>
+              <ArrowRightIcon className="w-3.5 h-3.5 text-emerald-200" />
             </a>
           </div>
 
@@ -171,8 +171,8 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-center text-sm font-bold text-white bg-gradient-to-r from-emerald-700 to-teal-900 shadow-sm"
               >
-                <SparklesIcon className="w-4 h-4 text-emerald-200" />
                 <span>Audition Registration</span>
+                <ArrowRightIcon className="w-4 h-4 text-emerald-200" />
               </a>
 
               <a
